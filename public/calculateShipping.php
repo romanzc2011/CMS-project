@@ -23,9 +23,11 @@ class Shipping {
     private $totalShipping;
     private $products;
     private $pricePerKilogram;
+    private $shippingProvider;
 
-    public function __construct(){
-
+    public function __construct($pricePerKilogram, $shippingProvider){
+        $this->pricePerKilogram = $pricePerKilogram;
+        $this->shippingProvider = $shippingProvider;
     }
 
     public function addProducts(Product $product){
